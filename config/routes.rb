@@ -14,6 +14,3 @@ Rails.application.routes.draw do
   patch "tasks/:id", to: "tasks#update"
   delete "tasks/:id", to: "tasks#destroy"
 end
-
-# it works without doing 'Add _path to the route prefix (left column)'?
-# What are the prefixes?

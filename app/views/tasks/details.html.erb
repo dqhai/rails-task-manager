@@ -10,5 +10,9 @@
   data: {turbo_method: :delete, turbo_confirm: "Are you really done?"}
 %>
 
-<a href="../tasks">go back</a>
+<%= link_to "edit #{@task.title}" ,
+  edit_task_path(@task)
+%>
+<%# <a href="../tasks">go back</a>
+<a href=".//edit">edit this To Do</a> %>
 <%# is there a way to code this the Rails way? %>
