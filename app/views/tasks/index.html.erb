@@ -1,0 +1,8 @@
+<h1>Fantastic tasks for today and where to find them</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+<li><%= link_to task.title, task_path(task) %></li>
+<% end %>
+</ul>
+<%# each or foreach %>
