@@ -1,7 +1,14 @@
-<h2>work in progress</h2>
+<p>work in progress</p>
 
-<h2><%= @task.title %></h2>
+
+<h3>Title: <%= @task.title %></h3>
+<p>Details:</p>
 <p><%= @task.details %></p>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you really done?"}
+%>
 
 <a href="../tasks">go back</a>
 <%# is there a way to code this the Rails way? %>

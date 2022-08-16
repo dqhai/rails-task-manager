@@ -17,13 +17,24 @@ class TasksController < ApplicationController
     @task.save
     redirect_to task_path(@task)
   end
-  # def edit
 
-  # end
+  def edit
+    @task = Task.find(params[:id])
+  end
 
-  # def update
+  def update
+    @task = Task.find(params[:id])
+    @task.update(task_params)
+    redirect_to task_path(@task)
+  end
 
-  # end
+  def destroy
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect_to restaurants_path, status: :see_other
+  end
+
+
   private
 
   def task_params
